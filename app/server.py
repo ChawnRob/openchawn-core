@@ -18,7 +18,7 @@ def ask(request: AskRequest):
 
     response = orchestrator(request.prompt)
 
-    save_memory("openchawn", response)
+    save_memory("openchawn", f"Réponse donnée au prompt: {request.prompt}")
 
     return {
         "response": response,
